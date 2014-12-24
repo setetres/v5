@@ -82,17 +82,62 @@ function initialize(presenceType){
         new google.maps.Point(15, 34)
     );
 
+     var icon = {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 10,
+        strokeColor: 'white',
+        strokeWeight: 2
+    };
+
     var markers = [];
 
     if(presenceType == 'Aeroportos') {
 
         markers = markers.slice(markers.length);
 
+        // inkstarter.cc session #01
+
         markers.push(new google.maps.Marker({
-            position:  new google.maps.LatLng(-19.9245018,-43.9352376),
+            position: new google.maps.LatLng(-19.9337667,-43.9262668),
             map: map,
-            title: 'Belo Horizonte',
-            icon: image1
+            title: 'InkStarter.cc Session #01',
+            icon: icon
+        }));
+
+        // inkstarter.cc session #02
+
+        markers.push(new google.maps.Marker({
+            position: new google.maps.LatLng(-19.9805261,-43.9434383),
+            map: map,
+            title: 'InkStarter.cc Session #02',
+            icon: icon
+        }));
+
+        // inkstarter.cc session #03
+
+        markers.push(new google.maps.Marker({
+            position: new google.maps.LatLng(-19.9273608,-43.9236176),
+            map: map,
+            title: 'InkStarter.cc Session #03',
+            icon: icon
+        }));
+
+        // inkstarter.cc session #04
+
+        markers.push(new google.maps.Marker({
+            position: new google.maps.LatLng(-19.944253,-43.9488501),
+            map: map,
+            title: 'InkStarter.cc Session #04',
+            icon: icon
+        }));
+
+        // inkstarter.cc session #06
+
+        markers.push(new google.maps.Marker({
+            position: new google.maps.LatLng(-19.9422802,-43.9468438),
+            map: map,
+            title: 'InkStarter.cc Session #06',
+            icon: icon
         }));
 
     }else{
