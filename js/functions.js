@@ -1,10 +1,14 @@
 $(document).ready(function(){
 
-    $(".crop").fullscreenbg();
+    // taget blank
+
+    $('a[rel=external]').attr('target', '_blank');
+
+    $('.crop').fullscreenbg();
 
     $(window).load(function(){
-        $(".crop").fullscreenbg();
-        $(".fit-video").fitVids();
+        $('.crop').fullscreenbg();
+        $('.fit-video, #map #content').fitVids();
     });
 
     initialize('Aeroportos');
@@ -41,120 +45,163 @@ function initialize(presenceType){
 
     var styles = [
         {
-            "stylers": [
+            'stylers': [
                 {
-                    "hue": "#ff1a00"
+                    'hue': '#ff1a00'
                 },
                 {
-                    "invert_lightness": true
+                    'invert_lightness': true
                 },
                 {
-                    "saturation": -100
+                    'saturation': -100
                 },
                 {
-                    "lightness": 33
+                    'lightness': 33
                 },
                 {
-                    "gamma": 0.5
+                    'gamma': 0.5
                 }
             ]
         },
         {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [
+            'featureType': 'water',
+            'elementType': 'geometry',
+            'stylers': [
                 {
-                    "color": "#1a1a1a"
+                    'color': '#1a1a1a'
                 }
             ]
         }
     ];
 
     map = new google.maps.Map(document.getElementById('map'),mapOptions);
+
     var styledMapType = new google.maps.StyledMapType(styles, {name: 'Sete Três'});
     map.mapTypes.set('Sete Três', styledMapType);
 
-    // custom pin
-
-    var image1 = new google.maps.MarkerImage('../img/pin.svg',
-        new google.maps.Size(51, 36),
-        new google.maps.Point(0,0),
-        new google.maps.Point(15, 34)
-    );
+    // pin
 
      var icon = {
         path: google.maps.SymbolPath.CIRCLE,
-        scale: 10,
-        strokeColor: 'white',
-        strokeWeight: 2
+        scale: 7,
+        strokeColor: '#2ecc71',
+        strokeWeight: 2,
+        fillColor: '#2ecc71',
+        fillOpacity: 0.3
     };
 
-    var markers = [];
+    // markers
 
-    if(presenceType == 'Aeroportos') {
+    //////////////////////////////////////////////////////////////////////////////////////////////////// inkstarter.cc session #01
 
-        markers = markers.slice(markers.length);
+    var infowindow1 = new google.maps.InfoWindow({
+      content: '<div id="content"><iframe width="560" height="315" src="//www.youtube.com/embed/t8_Dclozre0" frameborder="0" allowfullscreen></iframe></div>'
+    });
 
-        // inkstarter.cc session #01
+    var marker1 = new google.maps.Marker({
+        position: new google.maps.LatLng(-19.9337667,-43.9262668),
+        icon: icon,
+        map: map,
+        title: 'InkStarter.cc Session #01'
+    });
 
-        markers.push(new google.maps.Marker({
-            position: new google.maps.LatLng(-19.9337667,-43.9262668),
-            map: map,
-            title: 'InkStarter.cc Session #01',
-            icon: icon
-        }));
+    google.maps.event.addListener(marker1, 'click', function() {
+        infowindow1.open(map,marker1);
+        $('#map #content').fitVids();
+    });
 
-        // inkstarter.cc session #02
+    //////////////////////////////////////////////////////////////////////////////////////////////////// inkstarter.cc session #02
 
-        markers.push(new google.maps.Marker({
-            position: new google.maps.LatLng(-19.9805261,-43.9434383),
-            map: map,
-            title: 'InkStarter.cc Session #02',
-            icon: icon
-        }));
+    var infowindow2 = new google.maps.InfoWindow({
+      content: '<div id="content"><iframe width="560" height="315" src="//www.youtube.com/embed/5dVHCu3IlTw" frameborder="0" allowfullscreen></iframe></div>'
+    });
 
-        // inkstarter.cc session #03
+    var marker2 = new google.maps.Marker({
+        position: new google.maps.LatLng(-19.982666,-43.9450603),
+        icon: icon,
+        map: map,
+        title: 'InkStarter.cc Session #02'
+    });
 
-        markers.push(new google.maps.Marker({
-            position: new google.maps.LatLng(-19.9273608,-43.9236176),
-            map: map,
-            title: 'InkStarter.cc Session #03',
-            icon: icon
-        }));
+    google.maps.event.addListener(marker2, 'click', function() {
+        infowindow2.open(map,marker2);
+        $('#map #content').fitVids();
+    });
 
-        // inkstarter.cc session #04
+    //////////////////////////////////////////////////////////////////////////////////////////////////// inkstarter.cc session #03
 
-        markers.push(new google.maps.Marker({
-            position: new google.maps.LatLng(-19.944253,-43.9488501),
-            map: map,
-            title: 'InkStarter.cc Session #04',
-            icon: icon
-        }));
+    var infowindow3 = new google.maps.InfoWindow({
+      content: '<div id="content"><iframe width="560" height="315" src="//www.youtube.com/embed/fuAGa7M5v5w" frameborder="0" allowfullscreen></iframe></div>'
+    });
 
-        // inkstarter.cc session #06
+    var marker3 = new google.maps.Marker({
+        position: new google.maps.LatLng(-19.944253,-43.9488501),
+        icon: icon,
+        map: map,
+        title: 'InkStarter.cc Session #03'
+    });
 
-        markers.push(new google.maps.Marker({
-            position: new google.maps.LatLng(-19.9422802,-43.9468438),
-            map: map,
-            title: 'InkStarter.cc Session #06',
-            icon: icon
-        }));
+    google.maps.event.addListener(marker3, 'click', function() {
+        infowindow3.open(map,marker3);
+        $('#map #content').fitVids();
+    });
 
-    }else{
+    //////////////////////////////////////////////////////////////////////////////////////////////////// inkstarter.cc session #04
 
-        markers = markers.slice(markers.length);
+    var infowindow4 = new google.maps.InfoWindow({
+      content: '<div id="content"><iframe width="560" height="315" src="//www.youtube.com/embed/1XEq7i45F7A" frameborder="0" allowfullscreen></iframe></div>'
+    });
 
-        markers.push(new google.maps.Marker({
-            position:  new google.maps.LatLng(-19.91406, -43.94159),
-            map: map,
-            title: 'Terminal RodoviÃ¡rio de Belo Horizonte',
-            icon: image1
-        }));
+    var marker4 = new google.maps.Marker({
+        position: new google.maps.LatLng(-19.9273002,-43.9236204),
+        icon: icon,
+        map: map,
+        title: 'InkStarter.cc Session #04'
+    });
 
-    }
+    google.maps.event.addListener(marker4, 'click', function() {
+        infowindow4.open(map,marker4);
+        $('#map #content').fitVids();
+    });
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////// inkstarter.cc session #05
+
+    var infowindow5 = new google.maps.InfoWindow({
+      content: '<div id="content"><iframe width="560" height="315" src="//www.youtube.com/embed/wgZtpF9d_Yk" frameborder="0" allowfullscreen></iframe></div>'
+    });
+
+    var marker5 = new google.maps.Marker({
+        position: new google.maps.LatLng(-19.9068912,-43.9318065),
+        icon: icon,
+        map: map,
+        title: 'InkStarter.cc Session #05'
+    });
+
+    google.maps.event.addListener(marker5, 'click', function() {
+        infowindow5.open(map,marker5);
+        $('#map #content').fitVids();
+    });
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////// inkstarter.cc session #06
+
+    var infowindow6 = new google.maps.InfoWindow({
+      content: '<div id="content"><iframe width="560" height="315" src="//www.youtube.com/embed/6VOzRz6byOM" frameborder="0" allowfullscreen></iframe></div>'
+    });
+
+    var marker6 = new google.maps.Marker({
+        position: new google.maps.LatLng(-19.9422802,-43.9468438),
+        icon: icon,
+        map: map,
+        title: 'InkStarter.cc Session #06'
+    });
+
+    google.maps.event.addListener(marker6, 'click', function() {
+        infowindow6.open(map,marker6);
+        $('#map #content').fitVids();
+    });
 
 }
 
 google.maps.event.addDomListener(window, 'load', function(){
-    initialize('Aeroportos');
+    initialize();
 });
