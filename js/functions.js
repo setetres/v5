@@ -1,17 +1,29 @@
 $(document).ready(function(){
 
+    // konami code
+
+    Mousetrap.bind('up up down down left right left right b a', function() {
+        $('#guilherme-pangnotta').addClass('active');
+        setTimeout(function() {
+            $('#guilherme-pangnotta').removeClass('active');
+        },1600);
+    });
+
+    // quotes
+
+    var quotes = new Array("IJUSTWANNAGOHOME", "Konami Code?", "MAMAHATZ"),
+    randno = quotes[Math.floor(Math.random() * quotes.length)];
+    $('.quote').text(randno);
+
     // taget blank
 
     $('a[rel=external]').attr('target', '_blank');
 
-    $('.crop').fullscreenbg();
+    // window load
 
     $(window).load(function(){
-        $('.crop').fullscreenbg();
         $('.fit-video, #map #content').fitVids();
     });
-
-    initialize('Aeroportos');
 
 });
 
@@ -201,6 +213,8 @@ function initialize(presenceType){
     });
 
 }
+
+// initialize map
 
 google.maps.event.addDomListener(window, 'load', function(){
     initialize();
