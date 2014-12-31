@@ -11,7 +11,7 @@ $(document).ready(function(){
 
     // quotes
 
-    var quotes = new Array("IJUSTWANNAGOHOME", "Konami Code?", "MAMAHATZ"),
+    var quotes = new Array("IJUSTWANNAGOHOME", "Konami?", "MAMAHATZ!"),
     randno = quotes[Math.floor(Math.random() * quotes.length)];
     $('.quote').text(randno);
 
