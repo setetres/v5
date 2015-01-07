@@ -1,5 +1,28 @@
 $(document).ready(function(){
 
+    // instagram
+
+    function createPhotoElement(photo) {
+        var innerHtml = $('<img>').addClass('instagram-image').attr('src', photo.images.standard_resolution.url);
+        innerHtml = $('<a>').attr('target', '_blank').attr('href', photo.link).append(innerHtml);
+        return $('<div>').addClass('instagram-placeholder').attr('id', photo.id).append(innerHtml);
+    }
+
+    function didLoadInstagram(event, response) {
+        var that = this;
+        $.each(response.data, function(i, photo) {
+            $(that).append(createPhotoElement(photo));
+        });
+    }
+
+    $('.instagram').on('didLoadInstagram', didLoadInstagram);
+    $('.instagram').instagram({
+        userId: 14404969,
+        clientId: '352b088c837843868e5266273ad42ae5',
+        accessToken: '14404969.352b088.631a62607d9142d192c6ec6f304497d6',
+        count: 1
+    });
+
     // konami code
 
     Mousetrap.bind('up up down down left right left right b a', function() {
