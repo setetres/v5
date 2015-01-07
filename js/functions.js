@@ -27,9 +27,10 @@ $(document).ready(function(){
 
     Mousetrap.bind('up up down down left right left right b a', function() {
         $('#guilherme-pangnotta').addClass('active');
+        $('#toasty')[0].play();
         setTimeout(function() {
             $('#guilherme-pangnotta').removeClass('active');
-        },1600);
+        },666);
     });
 
     // quotes
