@@ -1,5 +1,15 @@
 $(document).ready(function(){
 
+    // twitter
+
+     $('#tweet').twittie({
+        username: 'setetres',
+        dateFormat: '%b %d/%y',
+        template: '{{tweet}} <div class="date">{{date}}</div>',
+        count: 10,
+        hideReplies: true
+    });
+
     // instagram
 
     function createPhotoElement(photo) {
