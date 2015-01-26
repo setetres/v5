@@ -4,7 +4,7 @@ $(document).ready(function(){
 
      $('#tweet').twittie({
         username: 'setetres',
-        dateFormat: '%b %d/%y',
+        dateFormat: '%b %d, %Y',
         template: '{{tweet}} <div class="date">{{date}}</div>',
         count: 10,
         hideReplies: true
