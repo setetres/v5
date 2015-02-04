@@ -10,3 +10,14 @@ ErrorDocument 414 /index.html
 ErrorDocument 500 /index.html
 ErrorDocument 501 /index.html
 Options -Indexes
+
+Redirect 301 /ello http://ello.co/setetres
+Redirect 301 /facebook http://fb.com/setetres
+Redirect 301 /github http://github.com/setetres
+Redirect 301 /instagram http://instagr.am/setetres
+Redirect 301 /linkedin http://linkedin.com/in/guilhermepangnotta
+Redirect 301 /medium http://medium.com/setetres
+Redirect 301 /twitter http://twitter.com/setetres
+Redirect 301 /vimeo http://vimeo.com/setetres
+
+Redirect 301 /resume http://docs.google.com/document/d/1EIoI0uGPfIEZyT0nWnaUzBLMLRAYsAhC4y9HgFNOsYk/edit?usp=sharing
