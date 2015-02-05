@@ -124,8 +124,6 @@ body
 // wr
 
 .wr
-    float: right
-    width: 960px
     height: 100%
     position: relative
 
@@ -305,6 +303,15 @@ body
                 &::after
                     top: -5px
 
+    // widget - commons
+
+    &.twitter,
+    &.tumblr
+        .sub
+            a,
+            span
+                background: $background
+
     // widget - twitter
 
     &.twitter
@@ -325,6 +332,9 @@ body
         width: 420px
 
         ul
+            li
+                padding-bottom: 20px
+                border-bottom: 1px solid lighten($background,6%)
             img
                 max-width: 100%
 

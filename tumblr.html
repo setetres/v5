@@ -9,32 +9,24 @@
         <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-        <title>{Title}</title>
-        {block:Description}
-            <meta name="description" content="{MetaDescription}"/>
-        {/block:Description}
+        <title>{Title}</title>{block:Description}
+        <meta name="description" content="{MetaDescription}"/>{/block:Description}
         <link rel="canonical" href="http://setetres.st"/>
 
         <meta property="og:type" content="website"/>
-        <meta property="og:title" content="{Title}"/>
-        {block:Description}
-            <meta property="og:description" content="{MetaDescription}"/>
-        {/block:Description}
+        <meta property="og:title" content="{Title}"/>{block:Description}
+        <meta property="og:description" content="{MetaDescription}"/>{/block:Description}
         <meta property="og:image" content="http://file.setetres.st/v5/img/share.png"/>
         <meta property="og:url" content="http://setetres.st"/>
 
-        <meta itemprop="name" content="{Title}"/>
-        {block:Description}
-            <meta itemprop="description" content="{MetaDescription}"/>
-        {/block:Description}
+        <meta itemprop="name" content="{Title}"/>{block:Description}
+        <meta itemprop="description" content="{MetaDescription}"/>{/block:Description}
         <meta itemprop="image" content="http://file.setetres.st/v5/img/share.png"/>
         <meta itemprop="url" content="http://setetres.st"/>
 
         <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:title" content="{Title}"/>
-        {block:Description}
-            <meta name="twitter:description" content="{MetaDescription}"/>
-        {/block:Description}
+        <meta name="twitter:title" content="{Title}"/>{block:Description}
+        <meta name="twitter:description" content="{MetaDescription}"/>{/block:Description}
         <meta name="twitter:image" content="http://file.setetres.st/v5/img/share.png"/>
 
         <link rel="icon" href="http://file.setetres.st/v5/favicon.ico"/>
@@ -57,8 +49,7 @@
                     </header>
                     <div id="main" role="main" class="main">
                         <h2 class="sub"><span>Current</span></h2>
-                        <p class="current cv">Frontend developer at <a href="http://founders.com.br" rel="external">FOUNDERS</a>.</p>
-                        <p>For more information, please view the <a href="http://setetres.st/resume" rel="external">resumé at Google Drive</a>.</p>
+                        <p class="current cv">Frontend developer at <a href="http://founders.com.br" rel="external">FOUNDERS</a>.<br/>For more information, please view the <a href="http://setetres.st/resume" rel="external">resumé at Google Drive</a>.</p>
                         <h2 class="sub"><span>Projects</span></h2>
                         <nav role="navigation">
                             <ul class="list">
@@ -109,7 +100,7 @@
                         <p><a href="http://v1.setetres.st">1.0</a>, <a href="http://1997.setetres.st">1.997</a>, <a href="http://v2.setetres.st">2.0</a>, <a href="http://v3.setetres.st">3.0</a> and <a href="http://v4.setetres.st">4.0</a>.</p>
                     </div>
                     <footer>
-                        <p class="sub"><span>5.2 ALPHA - Built with <a href="http://setetres.st/sasstarter" rel="external">Sasstarter</a></span></p>
+                        <p class="sub"><span>5.4 ALPHA - Built with <a href="http://setetres.st/sasstarter" rel="external">Sasstarter</a></span></p>
                     </footer>
                 </div>
             </div>
@@ -122,88 +113,81 @@
             <div class="widget tumblr">
                 <div class="center">
                     <h2 class="sub"><span>Posts</span></h2>
-                    <ul>
-                        {block:Posts}
-                            {block:Text}
-                                <li class="type-text">
-                                    {block:Title}
-                                        <h3><a href="{Permalink}">{Title}</a></h3>
-                                    {/block:Title}
-                                    {Body}
-                                </li>
-                            {/block:Text}
-                            {block:Photo}
-                                <li class="type-photo">
-                                    <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
-                                    {block:Caption}
-                                        <div class="caption">{Caption}</div>
-                                    {/block:Caption}
-                                </li>
-                            {/block:Photo}
-                            {block:Panorama}
-                                <li class="type-panorama">
-                                    {LinkOpenTag}
-                                        <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
-                                    {LinkCloseTag}{block:Caption}
-                                        <div class="caption">{Caption}</div>
-                                    {/block:Caption}
-                                </li>
-                            {/block:Panorama}
-                            {block:Photoset}
-                                <li class="type-photoset">
-                                    {Photoset-400}{block:Caption}
-                                        <div class="caption">{Caption}</div>
-                                    {/block:Caption}
-                                </li>
-                            {/block:Photoset}
-                            {block:Quote}
-                                <li class="type-quote">
-                                    "{Quote}"
-                                    {block:Source}
-                                        <div class="source">{Source}</div>
-                                    {/block:Source}
-                                </li>
-                            {/block:Quote}
-                            {block:Link}
-                                <li class="type-link">
-                                    <a href="{URL}" class="link" {Target}>{Name}</a>
-                                    {block:Description}
-                                        <div class="description">{Description}</div>
-                                    {/block:Description}
-                                </li>
-                            {/block:Link}
-                            {block:Chat}
-                                <li class="type-chat">
-                                    {block:Title}
-                                        <h3><a href="{Permalink}">{Title}</a></h3>
-                                    {/block:Title}
-                                    <ul class="chat">
-                                        {block:Lines}
-                                            <li class="{Alt} user_{UserNumber}">
-                                                {block:Label}
-                                                    <span class="label">{Label}</span>
-                                                {/block:Label}{Line}
-                                            </li>
-                                        {/block:Lines}
-                                    </ul>
-                                </li>
-                            {/block:Chat}
-                            {block:Video}
-                                <li class="type-video">
-                                    {Video-400}{block:Caption}
-                                        <div class="caption">{Caption}</div>
-                                    {/block:Caption}
-                                </li>
-                            {/block:Video}
-                            {block:Audio}
-                                <li class="type-audio">
-                                    {AudioEmbed}{block:Caption}
-                                        <div class="caption">{Caption}</div>
-                                    {/block:Caption}
-                                </li>
-                            {/block:Audio}
-                        {/block:Posts}
-                    </ul>
+                    <ul>{block:Posts}{block:Text}
+                        <li class="type-text">
+                            {block:Title}
+                                <h3><a href="{Permalink}">{Title}</a></h3>
+                            {/block:Title}
+                            {Body}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Text}{block:Photo}
+                        <li class="type-photo">
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Photo}{block:Panorama}
+                        <li class="type-panorama">
+                            {LinkOpenTag}
+                                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                            {LinkCloseTag}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Panorama}{block:Photoset}
+                        <li class="type-photoset">
+                            {Photoset-400}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Photoset}{block:Quote}
+                        <li class="type-quote">
+                            "{Quote}"
+                            {block:Source}
+                                <div class="source">{Source}</div>
+                            {/block:Source}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Quote}{block:Link}
+                        <li class="type-link">
+                            <a href="{URL}" class="link" {Target}>{Name}</a>
+                            {block:Description}
+                                <div class="description">{Description}</div>
+                            {/block:Description}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Link}{block:Chat}
+                        <li class="type-chat">
+                            {block:Title}
+                                <h3><a href="{Permalink}">{Title}</a></h3>
+                            {/block:Title}
+                            <ul class="chat">
+                                {block:Lines}
+                                    <li class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}{Line}
+                                    </li>
+                                {/block:Lines}
+                            </ul>
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Chat}{block:Video}
+                        <li class="type-video">
+                            {Video-400}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Video}{block:Audio}
+                        <li class="type-audio">
+                            {AudioEmbed}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                        </li>{/block:Audio}{/block:Posts}
+                    </ul>{block:Pagination}{block:PreviousPage}
+                    <a href="{PreviousPage}">← Previous</a>{/block:PreviousPage}{block:JumpPagination length="5"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>{/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>{/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                    <a href="{NextPage}">Next →</a>{/block:NextPage}{/block:Pagination}
                 </div>
             </div>
         </div>
