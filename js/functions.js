@@ -59,6 +59,27 @@ $(document).ready(function(){
         $('.fit-video, #map #content').fitVids();
     });
 
+    // window scroll
+
+    $(window).scroll(function(){
+
+        // fixed profile
+
+        if ($(window).height() + $(this).scrollTop() > $('.profile').height()){
+            $('.profile').addClass('active');
+        } else {
+            $('.profile').removeClass('active');
+        }
+
+        // fixed twitter
+
+        if ($(window).height() + $(this).scrollTop() > $('.twitter').height()){
+            $('.twitter').addClass('active');
+        } else {
+            $('.twitter').removeClass('active');
+        }
+    });
+
 });
 
 // map

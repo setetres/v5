@@ -56,6 +56,7 @@ footer
     text-align: left
     width: 100%
     clear: both
+    position: relative
 
 // fitvids
 
@@ -261,6 +262,12 @@ footer
     float: left
     padding: 20px 20px 0 20px
     text-transform: none
+    position: absolute
+    bottom: auto
+
+    &.active
+        position: fixed
+        bottom: 0
 
     .sub
         text-transform: uppercase
@@ -289,6 +296,7 @@ footer
     // profile
 
     &.profile
+        right: 640px
         width: 320px
         padding-bottom: 20px
 
@@ -301,6 +309,7 @@ footer
     // twitter
 
     &.twitter
+        right: 420px
         width: 220px
         padding-left: 0
 
@@ -311,6 +320,7 @@ footer
     // tumblr
 
     &.tumblr
+        right: 0
         width: 420px
         padding-left: 0
 
