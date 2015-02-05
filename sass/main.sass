@@ -114,6 +114,8 @@ body
     -webkit-text-size-adjust: 100%
     -ms-text-size-adjust: 100%
 
+    // link defaults
+
     p
         a
             color: $green
@@ -121,6 +123,32 @@ body
 
             &:hover
                 color: $white
+
+// wr
+
+.wr
+    float: right
+    width: 960px
+    background: lighten($background,2%)
+
+// main
+
+.main
+    p
+        margin-bottom: 20px
+
+// footer
+
+footer
+    .sub
+        font-size: 8px
+        margin-bottom: 0
+
+        a
+            padding-right: 0
+
+        &::after
+            top: -5px
 
 // titles
 
@@ -187,7 +215,6 @@ body
     li
         float: left
         width: 100%
-        margin-bottom: -1px
 
         span
             display: block
@@ -231,8 +258,7 @@ body
 // widget
 
 .widget
-    width: 220px
-    float: right
+    float: left
     padding: 20px 20px 0 20px
     text-transform: none
 
@@ -246,9 +272,9 @@ body
         color: lighten($background,40%)
 
     ul
-        list-style-type: none
         margin: 0
         padding: 0
+        list-style-type: none
 
         li
             margin-bottom: 20px
@@ -260,6 +286,38 @@ body
         &:hover
             color: $white
 
+    // profile
+
+    &.profile
+        width: 320px
+        padding-bottom: 20px
+
+        ul
+            margin-bottom: 20px
+
+            li
+                margin-bottom: -1px
+
+    // twitter
+
+    &.twitter
+        width: 220px
+        padding-left: 0
+
+        ul
+            li
+                margin-bottom: 20px
+
+    // tumblr
+
+    &.tumblr
+        width: 420px
+        padding-left: 0
+
+        ul
+            img
+                max-width: 100%
+
 // instagram
 
 .instagram
@@ -269,37 +327,6 @@ body
         width: 100%
         border-radius: 3px
 
-// wrapper
-
-.wr
-    float: right
-    width: 320px
-    padding: 20px
-    background: lighten($background,2%)
-
-// header
-
-header
-
-// main
-
-.main
-    p
-        margin-bottom: 20px
-
-// footer
-
-footer
-    .sub
-        font-size: 8px
-        margin-bottom: 0
-
-        a
-            padding-right: 0
-
-        &::after
-            top: -5px
-
 // map
 
 #map
@@ -307,7 +334,7 @@ footer
     position: fixed !important
     top: 0
     left: 0
-    right: 540px
+    right: 960px
 
     #content
         min-width: 500px
