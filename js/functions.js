@@ -6,7 +6,7 @@ $(document).ready(function(){
         username: 'setetres',
         dateFormat: '%b %d, %Y',
         template: '{{tweet}} <div class="date">{{date}}</div>',
-        count: 13,
+        count: 20,
         hideReplies: true
     });
 
