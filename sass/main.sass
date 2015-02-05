@@ -277,7 +277,7 @@ body
     // widget - profile
 
     &.profile
-        right: 640px
+        right: 660px
         width: 320px
         background: lighten($background,2%)
 
@@ -315,7 +315,7 @@ body
     // widget - twitter
 
     &.twitter
-        right: 420px
+        right: 440px
         width: 220px
 
         .center
@@ -329,14 +329,20 @@ body
 
     &.tumblr
         right: 0
-        width: 420px
+        width: 440px
 
         ul
             li
                 padding-bottom: 20px
                 border-bottom: 1px solid lighten($background,6%)
-            img
+
+            img,
+            iframe
                 max-width: 100%
+                border-radius: 3px
+
+        .pagination
+            padding-bottom: 20px
 
 // instagram photo
 
@@ -354,7 +360,7 @@ body
     position: fixed !important
     top: 0
     left: 0
-    right: 960px
+    right: 980px
 
     #content
         min-width: 500px
