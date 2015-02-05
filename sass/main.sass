@@ -52,11 +52,9 @@ footer
     width: 100%
 
 .center
-    margin: 0 auto
+    margin: 0
+    padding: 20px 20px 0 0
     text-align: left
-    width: 100%
-    clear: both
-    position: relative
 
 // fitvids
 
@@ -115,8 +113,6 @@ body
     -webkit-text-size-adjust: 100%
     -ms-text-size-adjust: 100%
 
-    // link defaults
-
     p
         a
             color: $green
@@ -131,27 +127,9 @@ body
     float: right
     width: 960px
     background: lighten($background,2%)
+    position: relative
 
-// main
-
-.main
-    p
-        margin-bottom: 20px
-
-// footer
-
-footer
-    .sub
-        font-size: 8px
-        margin-bottom: 0
-
-        a
-            padding-right: 0
-
-        &::after
-            top: -5px
-
-// titles
+// default titles
 
 .sub
     font-size: 11px
@@ -185,7 +163,7 @@ footer
     font-weight: normal
     color: $green
 
-// button
+// default button
 
 .button
     width: 100%
@@ -205,7 +183,7 @@ footer
         span
             color: $white
 
-// list
+// default list
 
 .list
     display: inline-block
@@ -256,17 +234,18 @@ footer
             &:nth-child(odd) .button
                 border-right: 0
 
-// widget
+// widgets
 
 .widget
     float: left
-    padding: 20px 20px 0 20px
     text-transform: none
     position: absolute
+    top: 0
     bottom: auto
 
     &.active
         position: fixed
+        top: auto
         bottom: 0
 
     .sub
@@ -286,6 +265,9 @@ footer
         li
             margin-bottom: 20px
 
+    p
+        margin-bottom: 20px
+
     a
         color: $green
         text-decoration: none
@@ -293,12 +275,17 @@ footer
         &:hover
             color: $white
 
-    // profile
+    // widget - profile
 
     &.profile
         right: 640px
         width: 320px
-        padding-bottom: 20px
+
+        .center
+            padding-left: 20px
+
+        p
+            text-transform: uppercase
 
         ul
             margin-bottom: 20px
@@ -306,29 +293,40 @@ footer
             li
                 margin-bottom: -1px
 
-    // twitter
+        footer
+            padding-bottom: 20px
+
+            .sub
+                font-size: 8px
+                margin-bottom: 0
+
+                a
+                    padding-right: 0
+
+                &::after
+                    top: -5px
+
+    // widget - twitter
 
     &.twitter
         right: 420px
         width: 220px
-        padding-left: 0
 
         ul
             li
                 margin-bottom: 20px
 
-    // tumblr
+    // widget - tumblr
 
     &.tumblr
         right: 0
         width: 420px
-        padding-left: 0
 
         ul
             img
                 max-width: 100%
 
-// instagram
+// instagram photo
 
 .instagram
     margin-bottom: 20px
@@ -337,7 +335,7 @@ footer
         width: 100%
         border-radius: 3px
 
-// map
+// google maps
 
 #map
     height: 100%
