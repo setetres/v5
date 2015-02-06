@@ -36,10 +36,10 @@ $(document).ready(function(){
     // konami code
 
     Mousetrap.bind('up up down down left right left right b a', function() {
-        $('#guilherme-pangnotta').addClass('active');
+        $('#guilherme-pangnotta, #pizza').addClass('active');
         $('#toasty')[0].play();
         setTimeout(function() {
-            $('#guilherme-pangnotta').removeClass('active');
+            $('#guilherme-pangnotta, #pizza').removeClass('active');
         },666);
     });
 
