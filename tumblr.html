@@ -38,158 +38,160 @@
     </head>
     <body>
         <div id="wr" class="wr">
-            <div class="widget profile">
-                <div class="center">
-                    <header>
-                        <h1 class="logo sub"><a href="/">SETETRÊS 73</a></h1>
-                        <div class="instagram"></div>
-                        <p>Hello.<br/>My name is Guilherme Pangnotta.</p>
-                        <p>I'm a web developer and web designer from Belo Horizonte, Brazil.</p>
-                        <h2 class="title quote"></h2>
-                    </header>
-                    <div id="main" role="main" class="main">
-                        <h2 class="sub"><span>Current</span></h2>
-                        <p class="current cv">Frontend developer at <a href="http://founders.com.br" rel="external">FOUNDERS</a>.<br/>For more information, please view the <a href="http://setetres.st/resume" rel="external">resumé at Google Drive</a>.</p>
-                        <h2 class="sub"><span>Projects</span></h2>
-                        <nav role="navigation">
-                            <ul class="list">
-                                <li>
-                                    <a href="http://ijwgh.club" class="button" rel="external">
-                                        IJWGH
-                                        <span>More than a store. It's a Club</span>
-                                        <i>→</i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://inkstarter.cc" class="button" rel="external">
-                                        InkStarter.cc<br/>
-                                        <span>A social experience about tattoos</span>
-                                        <i>→</i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://puta.nu" class="button" rel="external">
-                                        PUTA<br/>
-                                        <span>Porn Under Traditional Arts</span>
-                                        <i>→</i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://placevom.it" class="button" rel="external">
-                                        Placevom.it
-                                        <span>Image placeholder for disgusting layouts</span>
-                                        <i>→</i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <h2 class="sub"><span>Elsewhere</span></h2>
-                        <nav role="navigation">
-                            <ul class="list two">
-                                <li><a href="http://setetres.st/ello" class="button" rel="external">Ello</a></li>
-                                <li><a href="http://setetres.st/facebook" class="button" rel="external">Facebook</a></li>
-                                <li><a href="http://setetres.st/github" class="button" rel="external">Github</a></li>
-                                <li><a href="http://setetres.st/instagram" class="button" rel="external">Instagram</a></li>
-                                <li><a href="http://setetres.st/linkedin" class="button" rel="external">LinkedIn</a></li>
-                                <li><a href="http://setetres.st/medium" class="button" rel="external">Medium</a></li>
-                                <li><a href="http://setetres.st/twitter" class="button" rel="external">Twitter</a></li>
-                                <li><a href="http://setetres.st/vimeo" class="button" rel="external">Vimeo</a></li>
-                            </ul>
-                        </nav>
-                        <h2 class="sub"><span>Older versions</span></h2>
-                        <p><a href="http://v1.setetres.st">1.0</a>, <a href="http://1997.setetres.st">1.997</a>, <a href="http://v2.setetres.st">2.0</a>, <a href="http://v3.setetres.st">3.0</a> and <a href="http://v4.setetres.st">4.0</a>.</p>
-                    </div>
-                    <footer>
-                        <p class="sub"><span>5.4 ALPHA - Built with <a href="http://setetres.st/sasstarter" rel="external">Sasstarter</a></span></p>
-                    </footer>
-                </div>
-            </div>
-            <div class="widget twitter">
-                <div class="center">
-                    <h2 class="sub"><span>Drrrops</span></h2>
-                    <div id="tweet"></div>
-                </div>
-            </div>
-            <div class="widget tumblr">
-                <div class="center">
-                    <h2 class="sub"><span>Posts</span></h2>
-                    <ul>{block:Posts}{block:Text}
-                        <li class="type-text">
-                            {block:Title}
-                                <h3><a href="{Permalink}">{Title}</a></h3>
-                            {/block:Title}
-                            {Body}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Text}{block:Photo}
-                        <li class="type-photo">
-                            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
-                            {block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Photo}{block:Panorama}
-                        <li class="type-panorama">
-                            {LinkOpenTag}
-                                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
-                            {LinkCloseTag}{block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Panorama}{block:Photoset}
-                        <li class="type-photoset">
-                            {Photoset-400}{block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Photoset}{block:Quote}
-                        <li class="type-quote">
-                            "{Quote}"
-                            {block:Source}
-                                <div class="source">{Source}</div>
-                            {/block:Source}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Quote}{block:Link}
-                        <li class="type-link">
-                            <a href="{URL}" class="link" {Target}>{Name}</a>
-                            {block:Description}
-                                <div class="description">{Description}</div>
-                            {/block:Description}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Link}{block:Chat}
-                        <li class="type-chat">
-                            {block:Title}
-                                <h3><a href="{Permalink}">{Title}</a></h3>
-                            {/block:Title}
-                            <ul class="chat">
-                                {block:Lines}
-                                    <li class="{Alt} user_{UserNumber}">
-                                        {block:Label}
-                                            <span class="label">{Label}</span>
-                                        {/block:Label}{Line}
+            <div class="center">
+                <div class="widget profile">
+                    <div class="padding">
+                        <header>
+                            <h1 class="logo sub"><a href="/">SETETRÊS 73</a></h1>
+                            <div class="instagram"></div>
+                            <p>Hello.<br/>My name is Guilherme Pangnotta.</p>
+                            <p>I'm a web developer and web designer from Belo Horizonte, Brazil.</p>
+                            <h2 class="title quote"></h2>
+                        </header>
+                        <div id="main" role="main" class="main">
+                            <h2 class="sub"><span>Current</span></h2>
+                            <p class="current cv">Frontend developer at <a href="http://founders.com.br" rel="external">FOUNDERS</a>.<br/>For more information, please view the <a href="http://setetres.st/resume" rel="external">resumé at Google Drive</a>.</p>
+                            <h2 class="sub"><span>Projects</span></h2>
+                            <nav role="navigation">
+                                <ul class="list">
+                                    <li>
+                                        <a href="http://ijwgh.club" class="button" rel="external">
+                                            IJWGH
+                                            <span>More than a store. It's a Club</span>
+                                            <i>→</i>
+                                        </a>
                                     </li>
-                                {/block:Lines}
-                            </ul>
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Chat}{block:Video}
-                        <li class="type-video">
-                            {Video-400}{block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Video}{block:Audio}
-                        <li class="type-audio">
-                            {AudioEmbed}{block:Caption}
-                                <div class="caption">{Caption}</div>
-                            {/block:Caption}
-                            {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
-                        </li>{/block:Audio}{/block:Posts}
-                    </ul>{block:Pagination}
-                    <div class="pagination">{block:PreviousPage}
-                        <a href="{PreviousPage}">← Previous</a>{/block:PreviousPage}{block:JumpPagination length="5"}{block:CurrentPage}
-                        <span class="current_page">{PageNumber}</span>{/block:CurrentPage}{block:JumpPage}
-                        <a class="jump_page" href="{URL}">{PageNumber}</a>{/block:JumpPage}{/block:JumpPagination}{block:NextPage}
-                        <a href="{NextPage}">Next →</a>{/block:NextPage}
-                    </div>{/block:Pagination}
+                                    <li>
+                                        <a href="http://inkstarter.cc" class="button" rel="external">
+                                            InkStarter.cc<br/>
+                                            <span>A social experience about tattoos</span>
+                                            <i>→</i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://puta.nu" class="button" rel="external">
+                                            PUTA<br/>
+                                            <span>Porn Under Traditional Arts</span>
+                                            <i>→</i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://placevom.it" class="button" rel="external">
+                                            Placevom.it
+                                            <span>Image placeholder for disgusting layouts</span>
+                                            <i>→</i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <h2 class="sub"><span>Elsewhere</span></h2>
+                            <nav role="navigation">
+                                <ul class="list two">
+                                    <li><a href="http://setetres.st/ello" class="button" rel="external">Ello</a></li>
+                                    <li><a href="http://setetres.st/facebook" class="button" rel="external">Facebook</a></li>
+                                    <li><a href="http://setetres.st/github" class="button" rel="external">Github</a></li>
+                                    <li><a href="http://setetres.st/instagram" class="button" rel="external">Instagram</a></li>
+                                    <li><a href="http://setetres.st/linkedin" class="button" rel="external">LinkedIn</a></li>
+                                    <li><a href="http://setetres.st/medium" class="button" rel="external">Medium</a></li>
+                                    <li><a href="http://setetres.st/twitter" class="button" rel="external">Twitter</a></li>
+                                    <li><a href="http://setetres.st/vimeo" class="button" rel="external">Vimeo</a></li>
+                                </ul>
+                            </nav>
+                            <h2 class="sub"><span>Older versions</span></h2>
+                            <p><a href="http://v1.setetres.st">1.0</a>, <a href="http://1997.setetres.st">1.997</a>, <a href="http://v2.setetres.st">2.0</a>, <a href="http://v3.setetres.st">3.0</a> and <a href="http://v4.setetres.st">4.0</a>.</p>
+                        </div>
+                        <footer>
+                            <p class="sub"><span>5.4 ALPHA - Built with <a href="http://setetres.st/sasstarter" rel="external">Sasstarter</a></span></p>
+                        </footer>
+                    </div>
+                </div>
+                <div class="widget twitter">
+                    <div class="padding">
+                        <h2 class="sub"><span>Drrrops</span></h2>
+                        <div id="tweet"></div>
+                    </div>
+                </div>
+                <div class="widget tumblr">
+                    <div class="padding">
+                        <h2 class="sub"><span>Posts</span></h2>
+                        <ul>{block:Posts}{block:Text}
+                            <li class="type-text">
+                                {block:Title}
+                                    <h3><a href="{Permalink}">{Title}</a></h3>
+                                {/block:Title}
+                                {Body}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Text}{block:Photo}
+                            <li class="type-photo">
+                                <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                                {block:Caption}
+                                    <div class="caption">{Caption}</div>
+                                {/block:Caption}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Photo}{block:Panorama}
+                            <li class="type-panorama">
+                                {LinkOpenTag}
+                                    <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                                {LinkCloseTag}{block:Caption}
+                                    <div class="caption">{Caption}</div>
+                                {/block:Caption}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Panorama}{block:Photoset}
+                            <li class="type-photoset">
+                                {Photoset-400}{block:Caption}
+                                    <div class="caption">{Caption}</div>
+                                {/block:Caption}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Photoset}{block:Quote}
+                            <li class="type-quote">
+                                "{Quote}"
+                                {block:Source}
+                                    <div class="source">{Source}</div>
+                                {/block:Source}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Quote}{block:Link}
+                            <li class="type-link">
+                                <a href="{URL}" class="link" {Target}>{Name}</a>
+                                {block:Description}
+                                    <div class="description">{Description}</div>
+                                {/block:Description}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Link}{block:Chat}
+                            <li class="type-chat">
+                                {block:Title}
+                                    <h3><a href="{Permalink}">{Title}</a></h3>
+                                {/block:Title}
+                                <ul class="chat">
+                                    {block:Lines}
+                                        <li class="{Alt} user_{UserNumber}">
+                                            {block:Label}
+                                                <span class="label">{Label}</span>
+                                            {/block:Label}{Line}
+                                        </li>
+                                    {/block:Lines}
+                                </ul>
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Chat}{block:Video}
+                            <li class="type-video">
+                                {Video-400}{block:Caption}
+                                    <div class="caption">{Caption}</div>
+                                {/block:Caption}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Video}{block:Audio}
+                            <li class="type-audio">
+                                {AudioEmbed}{block:Caption}
+                                    <div class="caption">{Caption}</div>
+                                {/block:Caption}
+                                {block:Date}<div class="date">{ShortMonth} {DayOfMonth}, {Year}</div>{/block:Date}
+                            </li>{/block:Audio}{/block:Posts}
+                        </ul>{block:Pagination}
+                        <div class="pagination">{block:PreviousPage}
+                            <a href="{PreviousPage}">← Previous</a>{/block:PreviousPage}{block:JumpPagination length="5"}{block:CurrentPage}
+                            <span class="current_page">{PageNumber}</span>{/block:CurrentPage}{block:JumpPage}
+                            <a class="jump_page" href="{URL}">{PageNumber}</a>{/block:JumpPage}{/block:JumpPagination}{block:NextPage}
+                            <a href="{NextPage}">Next →</a>{/block:NextPage}
+                        </div>{/block:Pagination}
+                    </div>
                 </div>
             </div>
         </div>

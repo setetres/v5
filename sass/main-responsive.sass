@@ -1,19 +1,32 @@
-// 15 columns
-
-@media (min-width: 1250px)
-
 // 12 columns
 
-@media all and (max-width: 1249px)
+@media all
+    .center
+        width: 940px
 
 // 9 columns
 
-@media (max-width: 999px)
+@media (max-width: 992px)
+    .center
+        width: 700px
 
 // 6 columns
 
-@media (max-width: 769px)
+@media (max-width: 719px)
+    .center
+        width: 460px
+
+    .widget.profile,
+    .widget.twitter,
+    .widget.tumblr,
+    .widget.active
+        width: 100%
+        position: relative
+        top: 0
+        left: 0
 
 // 4 columns
 
 @media (max-width: 479px)
+    .center
+        width: 300px
