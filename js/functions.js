@@ -45,18 +45,20 @@ $(document).ready(function(){
 
     // quotes
 
-    var quotes = new Array("IJUSTWANNAGOHOME", "Konami?", "MAMAHATZ!"),
+    var quotes = new Array('IJUSTWANNAGOHOME', 'Konami?', 'MAMAHATZ!'),
     randno = quotes[Math.floor(Math.random() * quotes.length)];
     $('.quote').text(randno);
 
     // taget blank
 
     $('a[rel=external]').attr('target', '_blank');
+    $('.crop').fullscreenbg();
 
     // window load
 
     $(window).load(function(){
-        $('.fit-video, #map #content').fitVids();
+        $(".crop").fullscreenbg();
+        $(".fit-video").fitVids();
     });
 
     // window scroll
