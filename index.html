@@ -34,14 +34,10 @@
         <link rel="stylesheet" href="css/main.css"/>
 
         <style>
-            ::-moz-selection {background: #2ecc71;}
-            ::selection {background: #2ecc71;}
-            ::-webkit-scrollbar-thumb {background: #2ecc71;}
-            body p a {color: #2ecc71;}
-            .sub a:hover {color: #2ecc71;}
-            .title {color: #2ecc71;}
-            .button:hover {color: #2ecc71;}
-            .widget a {color: #2ecc71;}
+            ::-moz-selection {background: {AccentColor};}
+            ::selection {background: {AccentColor};}
+            ::-webkit-scrollbar-thumb {background: {AccentColor};}
+            body p a, .sub a, .widget a, .title, .button:hover {color: {AccentColor};}
         </style>
 
         <script src="js/modernizr.js"></script>
@@ -124,7 +120,7 @@
                 </div>
                 <div class="widget twitter">
                     <div class="padding">
-                        <h2 class="sub"><span>Drooops</span></h2>
+                        <h2 class="sub"><a href="http://twitter.com/setetres" rel="external">Drooops</a></h2>
                         <div id="tweet"></div>
                     </div>
                 </div>
@@ -201,56 +197,9 @@
         <script src="js/jquery.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/functions.js"></script>
+        <script src="js/setetres.js"></script>
         <script src="js/grid.js"></script>
         <script>
-
-            $(document).ready(function(){
-
-                // twitter
-
-                $('#tweet').twittie({
-                    username: 'setetres',
-                    apiPath: 'http://file.setetres.st/v5/twitter/tweet.php',
-                    dateFormat: '%b %d, %Y',
-                    template: '{{tweet}} <div class="date">{{date}}</div>',
-                    count: 20,
-                    hideReplies: true
-                });
-
-                // moving stripes
-
-                var bgBackground = document.getElementById('stripeBackground');
-                function render(){
-                    bgBackground.patternizer({
-                        stripes: [
-                            {
-                                color: '#2ecc71',
-                                rotation: 45,
-                                opacity: 100,
-                                mode: 'normal',
-                                width: 1,
-                                gap: 70,
-                                offset: 0
-                            }
-                        ],
-                        bg: '#1a1a1a'
-                    });
-                }
-                function onResize(){
-                    var buffer = 100;
-                    if (bgBackground.width - window.innerWidth < buffer ||
-                        bgBackground.height - window.innerHeight < buffer) {
-                        bgBackground.width = window.innerWidth + (buffer * 2);
-                        bgBackground.height = window.innerHeight + (buffer * 2);
-                        render();
-                    }
-                }
-                function init(){
-                    onResize();
-                    window.addEventListener('resize', Cowboy.throttle(200, onResize), false);
-                }
-                init();
-            });
 
             // analytics
 

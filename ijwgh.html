@@ -38,11 +38,7 @@
             ::-moz-selection {background: {AccentColor};}
             ::selection {background: {AccentColor};}
             ::-webkit-scrollbar-thumb {background: {AccentColor};}
-            body p a {color: {AccentColor};}
-            .sub a:hover {color: {AccentColor};}
-            .title {color: {AccentColor};}
-            .button:hover {color: {AccentColor};}
-            .widget a {color: {AccentColor};}
+            body p a, .sub a, .widget a, .title, .button:hover {color: {AccentColor};}
         </style>
 
         <script src="http://file.setetres.st/v5/js/modernizr.js"></script>
@@ -72,7 +68,7 @@
                 </div>
                 <div class="widget twitter">
                     <div class="padding">
-                        <h2 class="sub"><span>Drooops <a href="http://twitter.com/ap_oddities" rel="external">@ap_oddities</a></span></h2>
+                        <h2 class="sub"><a href="http://twitter.com/ap_oddities" rel="external">Drooops</a></h2>
                         <div id="tweet"></div>
                     </div>
                 </div>
@@ -172,23 +168,10 @@
         <script src="http://file.setetres.st/v5/js/jquery.js"></script>
         <script src="http://file.setetres.st/v5/js/plugins.js"></script>
         <script src="http://file.setetres.st/v5/js/functions.js"></script>
+        <script src="http://file.setetres.st/v5/js/ijwgh.js"></script>
         <script>
 
             $(document).ready(function(){
-
-                // twitter
-
-                $('#tweet').twittie({
-                    username: 'ap_oddities',
-                    apiPath: 'http://file.setetres.st/v5/twitter/tweet-ijwgh.php',
-                    dateFormat: '%b %d, %Y',
-                    template: '{{tweet}} <div class="date">{{date}}</div>',
-                    count: 20,
-                    hideReplies: true
-                });
-
-                // moving stripes
-
                 var bgBackground = document.getElementById('stripeBackground');
                 function render(){
                     bgBackground.patternizer({
@@ -220,7 +203,6 @@
                     window.addEventListener('resize', Cowboy.throttle(200, onResize), false);
                 }
                 init();
-
             });
 
             // analytics
