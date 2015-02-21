@@ -52,12 +52,10 @@ $(document).ready(function(){
     // taget blank
 
     $('a[rel=external]').attr('target', '_blank');
-    $('.crop').fullscreenbg();
 
     // window load
 
     $(window).load(function(){
-        $(".crop").fullscreenbg();
         $(".fit-video").fitVids();
     });
 

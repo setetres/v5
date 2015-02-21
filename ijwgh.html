@@ -34,6 +34,17 @@
         <link rel="stylesheet" href="http://file.setetres.st/v5/css/main.css"/>
         <link rel="alternate" href="{RSS}" type="application/rss+xml"/>
 
+        <style>
+            ::-moz-selection {background: {AccentColor};}
+            ::selection {background: {AccentColor};}
+            ::-webkit-scrollbar-thumb {background: {AccentColor};}
+            body p a {color: {AccentColor};}
+            .sub a:hover {color: {AccentColor};}
+            .title {color: {AccentColor};}
+            .button:hover {color: {AccentColor};}
+            .widget a {color: {AccentColor};}
+        </style>
+
         <script src="http://file.setetres.st/v5/js/modernizr.js"></script>
     </head>
     <body>
@@ -138,6 +149,7 @@
         </div>
         <div id="pizza"></div>
         <div id="guilherme-pangnotta"><div></div></div>
+        <canvas id="stripeBackground"></canvas>
         <audio id="toasty" preload="auto">
             <source src="toasty.mp3"/>
             <source src="toasty.ogg"/>
@@ -148,6 +160,44 @@
         <script src="http://file.setetres.st/v5/js/plugins.js"></script>
         <script src="http://file.setetres.st/v5/js/functions.js"></script>
         <script>
+
+            $(document).ready(function(){
+
+                // moving stripes
+
+                var bgBackground = document.getElementById('stripeBackground');
+                function render(){
+                    bgBackground.patternizer({
+                        stripes: [
+                            {
+                                color: '{AccentColor}',
+                                rotation: 45,
+                                opacity: 100,
+                                mode: 'normal',
+                                width: 1,
+                                gap: 70,
+                                offset: 0
+                            }
+                        ],
+                        bg: '#1a1a1a'
+                    });
+                }
+                function onResize(){
+                    var buffer = 100;
+                    if (bgBackground.width - window.innerWidth < buffer ||
+                        bgBackground.height - window.innerHeight < buffer) {
+                        bgBackground.width = window.innerWidth + (buffer * 2);
+                        bgBackground.height = window.innerHeight + (buffer * 2);
+                        render();
+                    }
+                }
+                function init(){
+                    onResize();
+                    window.addEventListener('resize', Cowboy.throttle(200, onResize), false);
+                }
+                init();
+
+            });
 
             // analytics
 

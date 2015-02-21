@@ -102,11 +102,9 @@ $skin: #eaba8b
 // custom
 
 ::-moz-selection
-    background: $green
     color: $background
 
 ::selection
-    background: $green
     color: $background
 
 ::-webkit-scrollbar
@@ -119,7 +117,6 @@ $skin: #eaba8b
 
 ::-webkit-scrollbar-thumb
     -webkit-border-radius: 0
-    background: $green
 
 html, body
     width: 100%
@@ -127,12 +124,12 @@ html, body
 
 body
     padding: 0
+    color: $white
     background: $background
     background-size: cover
     font-family: "Courier New"
     font-size: 10px
     text-transform: uppercase
-    color: $color
     overflow-x: hidden
     overflow-y: scroll
     -webkit-text-size-adjust: 100%
@@ -140,7 +137,6 @@ body
 
     p
         a
-            color: $green
             text-decoration: none
 
             &:hover
@@ -169,9 +165,6 @@ body
         z-index: 2
         padding-right: 10px
 
-    a:hover
-        color: $green
-
     &::after
         content: ''
         border-bottom: 1px solid $white
@@ -184,7 +177,6 @@ body
 .title
     font-size: 22px
     font-weight: normal
-    color: $green
     text-transform: uppercase
 
 // default button
@@ -202,8 +194,6 @@ body
     position: relative
 
     &:hover
-        color: $green
-
         span
             color: $white
 
@@ -297,7 +287,6 @@ body
         margin-bottom: 20px
 
     a
-        color: $green
         text-decoration: none
 
         &:hover
@@ -332,15 +321,6 @@ body
 
                 &::after
                     top: -5px
-
-    // widget - commons
-
-    &.twitter,
-    &.tumblr
-        .sub
-            a,
-            span
-                background: $background
 
     // widget - twitter
 
@@ -414,6 +394,11 @@ body
         .padding
             position: absolute
             z-index: 2
+
+// stripe background
+
+#stripeBackground
+    position: fixed
 
 // pizza
 
