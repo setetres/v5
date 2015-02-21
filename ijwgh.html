@@ -72,7 +72,7 @@
                 </div>
                 <div class="widget twitter">
                     <div class="padding">
-                        <h2 class="sub"><span>Drooops</span></h2>
+                        <h2 class="sub"><span>Drooops <a href="http://twitter.com/ap_oddities" rel="external">@ap_oddities</a></span></h2>
                         <div id="tweet"></div>
                     </div>
                 </div>
@@ -164,8 +164,8 @@
         <div id="guilherme-pangnotta"><div></div></div>
         <canvas id="stripeBackground"></canvas>
         <audio id="toasty" preload="auto">
-            <source src="toasty.mp3"/>
-            <source src="toasty.ogg"/>
+            <source src="http://file.setetres.st/v5/toasty.mp3"/>
+            <source src="http://file.setetres.st/v5/toasty.ogg"/>
         </audio>
         <script src="//use.typekit.net/emy0sfw.js"></script>
         <script>try{Typekit.load();}catch(e){}</script>
@@ -175,6 +175,17 @@
         <script>
 
             $(document).ready(function(){
+
+                // twitter
+
+                $('#tweet').twittie({
+                    username: 'ap_oddities',
+                    apiPath: 'http://file.setetres.st/v5/twitter/tweet-ijwgh.php',
+                    dateFormat: '%b %d, %Y',
+                    template: '{{tweet}} <div class="date">{{date}}</div>',
+                    count: 20,
+                    hideReplies: true
+                });
 
                 // moving stripes
 
