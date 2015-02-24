@@ -157,7 +157,7 @@ body
 
     a,
     span
-        background: lighten($background,2%)
+        background: $background
         display: inline-block
         color: $white
         text-decoration: none
@@ -305,6 +305,11 @@ body
         width: 320px
         background: lighten($background,2%)
         z-index: 2
+
+        .sub
+            a,
+            span
+                background: lighten($background,2%)
 
         p
             text-transform: uppercase
