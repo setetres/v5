@@ -1,9 +1,9 @@
 v5
 ==
 
-v5.0 of my website. and now a dumplr (dump+tumblr).
+v5.0 of my website. and now it's an awesome dumplr (dump+tumblr).
 
-Go to [xxxxxxx.ooo] &#8212; XXXXXXX.OOO it's a [Seventy Three Project].
+Follow me: [xxxxxxx.ooo] &#8212; A [Seventy Three Project].
 
 ![v5](http://files.setetres.st/img/v5-header.gif?v=1&raw=true)
 
