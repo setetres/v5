@@ -1,17 +1,16 @@
 v5
 ==
 
-v5.0 of my website. and now it's an awesome dumplr (dump+tumblr).
+v5.0 of my website.
 
-Follow me: [XXXXXXX.OOO] &#8212; A [Seventy Three Project].
+Discontinued Page &#8212; Historical only. Looking for new stuff? Go to [setetres.st].
 
-![v5](http://files.setetres.st/img/v5-header.gif?v=1&raw=true)
+![v4](http://files.setetres.st/img/v5-header.gif?v=1&raw=true)
 
 License
 -------
 
 v5 is under a [Creative Commons Attribution License].
 
-[Seventy Three Project]: http://setetres.st
-[XXXXXXX.OOO]: http://xxxxxxx.ooo
+[setetres.st]: http://setetres.st
 [Creative Commons Attribution License]: http://creativecommons.org/licenses/by/4.0

@@ -95,9 +95,11 @@ $skin: #eaba8b
 // custom
 
 ::-moz-selection
+    background: $green
     color: $background
 
 ::selection
+    background: $green
     color: $background
 
 ::-webkit-scrollbar
@@ -109,6 +111,7 @@ $skin: #eaba8b
     -webkit-border-radius: 0
 
 ::-webkit-scrollbar-thumb
+    background: $green
     -webkit-border-radius: 0
 
 html, body
@@ -122,7 +125,6 @@ body
     background-size: cover
     font-family: "Courier New"
     font-size: 10px
-    text-transform: uppercase
     overflow-x: hidden
     overflow-y: scroll
     -webkit-text-size-adjust: 100%
@@ -131,6 +133,7 @@ body
     p
         a
             text-decoration: none
+            color: $green
 
             &:hover
                 color: $white
@@ -147,6 +150,9 @@ body
     font-size: 11px
     font-weight: normal
     margin: 0 0 20px 0
+
+    a
+        color: $green
 
     a,
     span
@@ -174,6 +180,7 @@ body
     font-size: 22px
     font-weight: normal
     text-transform: uppercase
+    color: $green
 
 // default button
 
@@ -190,6 +197,8 @@ body
     position: relative
 
     &:hover
+        color: $green
+
         span
             color: $white
 
@@ -278,6 +287,7 @@ body
         margin-bottom: 20px
 
     a
+        color: $green
         text-decoration: none
 
         &:hover
