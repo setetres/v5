@@ -5,7 +5,7 @@ v5.0 of my website.
 
 Discontinued Page &#8212; Historical only. Looking for new stuff? Go to [setetres.st].
 
-![v4](http://files.setetres.st/img/v5-header.gif?v=2&raw=true)
+![v5](http://files.setetres.st/img/v5-header.gif?v=2&raw=true)
 
 License
 -------
