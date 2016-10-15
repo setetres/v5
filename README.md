@@ -3,7 +3,7 @@ v5 [![Github License](https://img.shields.io/github/license/setetres/v5.svg)](ht
 
 v5.0 of my website. [http://v5.setetres.st]
 
-[![v5](http://files.setetres.st/img/v5-desktop.png?v=1&raw=true)](http://v5.setetres.st)
+[![v5](http://files.setetres.st/img/v5-desktop.png?v=2&raw=true)](http://v5.setetres.st)
 
 License
 -------
