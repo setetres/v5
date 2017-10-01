@@ -1,9 +1,7 @@
 v5 [![Github License](https://img.shields.io/github/license/setetres/v5.svg)](https://github.com/setetres/v5/blob/master/LICENSE)
 ==
 
-v5.0 of my website. [http://v5.setetres.st]
-
-[![v5](http://setetres.s3.amazonaws.com/setetres.st/img/v5-desktop.png?v=2&raw=true)](http://v5.setetres.st)
+[![v5](https://setetres.s3.amazonaws.com/setetres.st/img/v5-desktop.png?v=2&raw=true)](http://v5.setetres.st)
 
 License
 -------
