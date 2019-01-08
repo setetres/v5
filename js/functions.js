@@ -19,14 +19,7 @@ $(document).ready(function(){
     $('.setetres').instagram({
         userId: 14404969,
         clientId: '352b088c837843868e5266273ad42ae5',
-        accessToken: '14404969.352b088.631a62607d9142d192c6ec6f304497d6',
-        count: 1
-    });
-    $('.leitin').on('didLoadInstagram', didLoadInstagram);
-    $('.leitin').instagram({
-        userId: 110688,
-        clientId: '352b088c837843868e5266273ad42ae5',
-        accessToken: '14404969.352b088.631a62607d9142d192c6ec6f304497d6',
+        accessToken: '14404969.352b088.4a9e511c2d03438b8860faf5319b9f69',
         count: 1
     });
 
